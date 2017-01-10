@@ -4,23 +4,55 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>hc-videojs demo</title>
+    <title>hc-video demo</title>
 
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 
     <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
     <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-    <link rel="import" href="../hc-videojs.html">
+    <link rel="import" href="../hc-video.html">
+    <link rel="stylesheet" href="../../video.js/dist/video-js.css">
 
     <style is="custom-style" include="demo-pages-shared-styles">
+      .centered {
+        max-width: 960px;
+      }
     </style>
   </head>
   <body>
     <div class="vertical-section-container centered">
-      <h3>Basic hc-videojs demo</h3>
+      <h3>Native <code>HTML 5</code> demo</h3>
       <demo-snippet>
         <template>
-          <hc-videojs></hc-videojs>
+            <video width="920" controls preload="metadata" poster="http://vjs.zencdn.net/v/oceans.png" muted>
+              <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
+              <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'>
+              <source src="http://vjs.zencdn.net/v/oceans.ogv" type='video/ogg'>
+            </video>
+        </template>
+      </demo-snippet>
+    </div>
+    <div class="vertical-section-container centered">
+      <h3>Basic <code>hc-video</code> demo</h3>
+      <demo-snippet>
+        <template>
+            <video is="hc-video" class="vjs-big-play-button-centered" controls preload="metadata" poster="http://vjs.zencdn.net/v/oceans.png" fluid>
+              <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
+              <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'>
+              <source src="http://vjs.zencdn.net/v/oceans.ogv" type='video/ogg'>
+            </video>
+        </template>
+      </demo-snippet>
+    </div>
+    <div class="vertical-section-container centered">
+      <h3>Basic <code>hc-video</code> demo</h3>
+      <demo-snippet>
+        <template>
+            <video is="hc-video" class="vjs-big-play-button-centered" controls preload="metadata" poster="http://vjs.zencdn.net/v/oceans.png" fluid>
+              <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
+              <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'>
+              <source src="http://vjs.zencdn.net/v/oceans.ogv" type='video/ogg'>
+            </video>
         </template>
       </demo-snippet>
     </div>

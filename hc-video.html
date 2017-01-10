@@ -1,0 +1,35 @@
+<link rel="import" href="../polymer/polymer.html">
+<script src="../video.js/dist/video.js" async></script>
+
+<!--
+`hc-video`
+Polymer element for VideoJS
+
+@demo demo/index.html
+-->
+
+<script>
+  Polymer({
+
+    is: 'hc-video',
+    extends: 'video',
+
+    properties: {
+      fluid: Boolean
+    },
+    created() {
+      // Required by VideoJS to create the player
+      this.classList.add('video-js');
+    },
+
+    attached() {
+      // alert('test');
+      // console.log('test');
+      window.videojs(this, null, () => {
+        console.log('READY!', performance.now())
+      });
+      // console.log('test', this.fluid);
+    }
+
+  });
+</script>

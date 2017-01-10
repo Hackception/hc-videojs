@@ -1,9 +1,10 @@
 {
-  "name": "hc-videojs",
+  "name": "hc-video",
   "description": "Polymer element for VideoJS",
-  "main": "hc-videojs.html",
+  "main": "hc-video.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0"
+    "polymer": "Polymer/polymer#^1.4.0",
+    "video.js": "^5.15.1"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
