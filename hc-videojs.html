@@ -1,0 +1,34 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`hc-videojs`
+Polymer element for VideoJS
+
+@demo demo/index.html 
+-->
+
+<dom-module id="hc-videojs">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'hc-videojs',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'hc-videojs',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
